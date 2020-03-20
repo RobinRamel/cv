@@ -10,8 +10,11 @@ md : tablet et plus grand
 sm : phablet et plus grand
 xs : mobile only
 *********************/
+* {
+  box-sizing: border-box;
+}
+
 html, body {
-  height: 100%;
   margin: auto;
   background-color: #2F4357;
   color: white;
@@ -59,7 +62,7 @@ h5 {
 h6 {
   font-size: 1.5rem;
   font-family: Roboto, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 h5, h2 {
@@ -320,6 +323,11 @@ h2.underlined-title--dark:after {
 .right__top {
   margin-bottom: 5rem;
 }
+@media (max-width: 640px) {
+  .right__bot {
+    margin-bottom: 5rem;
+  }
+}
 .right__title-top {
   padding: 2rem 0 2rem 8rem;
 }
@@ -342,9 +350,6 @@ h2.underlined-title--dark:after {
   font-size: 1.2rem;
   font-family: Roboto, sans-serif;
   padding-top: 10rem;
-}
-.left--transition {
-  animation: closeMobileMenu 1.5s cubic-bezier(0.37, 0.93, 0.65, 1.01) forwards;
 }
 @media (max-width: 640px) {
   .left--transition {

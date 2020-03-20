@@ -17,7 +17,12 @@ $(function() {
         $(".left").removeClass("left--mobile--open");
         $(".left").addClass("left--transition");
         $(".mobile").removeClass("mobile--open");
-        $('.mobile-cta').delay(1500).css("display", "block");
+        $('.mobile-cta')
+            .delay(1500)
+            .queue(function (next) {
+                $(this).css("display", "block");
+                next();
+            });
         $(".bg-menu-mobile").removeClass("bg-menu-mobile--open");
     })
 
