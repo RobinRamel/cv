@@ -387,6 +387,34 @@ h2.underlined-title--dark:after {
   font-weight: bold;
   padding-left: 20px;
 }
+.left__contact .row__libelle a {
+  text-decoration: inherit;
+  color: white;
+}
+.left__contact .row__libelle--arrow {
+  padding-right: 2rem;
+  position: relative;
+}
+.left__contact .row__libelle--arrow:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 15px;
+  height: 2px;
+  background-color: white;
+}
+.left__contact .row__libelle--arrow:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  padding: 2px;
+  transform: translateY(-50%) rotate(-45deg);
+}
 .left__hard-skills .row__left-col {
   width: 50%;
   text-align: left;
