@@ -8,6 +8,7 @@ $gutter: 3rem;
 $left-gutter: 8rem;
 $left-gutter-mobile: 3rem;
 $top-container-gutter: 10rem;
+$top-container-gutter-mobile: 7rem;
 
 $border-width: 2px;
 $dot-diameter: 8px;
@@ -390,13 +391,14 @@ h2.underlined-title {
   font-family: Roboto, sans-serif;
   padding-top: $top-container-gutter;
 
-  &--transition {
-    //animation: closeMobileMenu 1.5s cubic-bezier(.37,.93,.65,1.01) forwards ;
+  @include breakpoint(xs) {
+    padding-top: $top-container-gutter-mobile;
 
-    @include breakpoint(xs) {
+    &--transition {
       animation: closeMobileMenuXs 1.5s cubic-bezier(.37,.93,.65,1.01) forwards ;
     }
   }
+
 
 
   @include breakpoint(lt-md) {
@@ -452,25 +454,28 @@ h2.underlined-title {
   &__contents {
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
+    margin: 3rem 0;
+
 
     .row {
       display: flex;
     }
 
     .row:not(:last-child) {
-      padding-bottom: 10px;
-    }
-
-    &--contact {
-      .row:not(:last-child) {
-        padding-bottom: 20px;
+      padding-bottom: 2rem;
+      @include breakpoint(xs) {
+        padding-bottom: 3rem;
       }
     }
+
   }
 
   aside {
     width: 80%;
+
+    @include breakpoint(xs) {
+      margin-bottom: 5rem;
+    }
   }
 
   &.header-left {

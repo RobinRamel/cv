@@ -352,6 +352,9 @@ h2.underlined-title--dark:after {
   padding-top: 10rem;
 }
 @media (max-width: 640px) {
+  .left {
+    padding-top: 7rem;
+  }
   .left--transition {
     animation: closeMobileMenuXs 1.5s cubic-bezier(0.37, 0.93, 0.65, 1.01) forwards;
   }
@@ -395,19 +398,26 @@ h2.underlined-title--dark:after {
 .left__contents {
   display: flex;
   flex-direction: column;
-  margin: 30px 0;
+  margin: 3rem 0;
 }
 .left__contents .row {
   display: flex;
 }
 .left__contents .row:not(:last-child) {
-  padding-bottom: 10px;
+  padding-bottom: 2rem;
 }
-.left__contents--contact .row:not(:last-child) {
-  padding-bottom: 20px;
+@media (max-width: 640px) {
+  .left__contents .row:not(:last-child) {
+    padding-bottom: 3rem;
+  }
 }
 .left aside {
   width: 80%;
+}
+@media (max-width: 640px) {
+  .left aside {
+    margin-bottom: 5rem;
+  }
 }
 @media (max-width: 1024px) {
   .left.header-left {
